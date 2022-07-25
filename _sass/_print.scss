@@ -1,0 +1,70 @@
+@charset 'utf-8';
+@media print {
+	html {
+		width: 1280px;
+		transform: scale(.8);
+		transform-origin: left top;
+	}
+	body {
+		padding-left: 0;
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+	.box__fixed_top {
+		position: absolute;
+	}
+	// #g_nav
+
+	.contents {
+		main {
+			width: 100%;
+		}
+		.box__section {
+			margin-bottom: 40px;
+			 > .box__section {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	*[class^=col-] {
+		float: left;
+	}
+	.row {
+		@for $i from 1 through 12 {
+			 > *[class^=col-xs-#{$i}],
+			 > *[class^=col-sm-#{$i}],
+			 > *[class^=col-md-#{$i}],
+			 > *[class^=col-lg-#{$i}] {
+				width: percentage(($i / 12));
+			}
+		}
+	}
+	.mh {
+		height: auto !important;
+	}
+	.pagetop {
+		display: none !important;
+	}
+	.toggle_target {
+		display: block !important;
+	}
+	.table {
+		&-responsive {
+			.table {
+				tbody,
+				tfoot,
+				thead {
+					tr td,
+					tr th {
+						white-space: normal;
+					}
+					th {
+						white-space: normal;
+					}
+				}
+			}
+		}
+	}
+}

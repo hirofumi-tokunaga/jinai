@@ -1,0 +1,108 @@
+// ---------------------------------------------
+//  text
+// ---------------------------------------------
+.txt {
+	// リード文
+	&__lead {
+		margin-bottom: 1em;
+		line-height: 1.4;
+		font-size: ($lead-font-size *.8);
+		font-weight: $lead-font-weight;
+		@include media-breakpoint-up(md) {
+			font-size: $lead-font-size;
+		}
+	}
+	// リード小
+	&__lead_s {
+		margin-bottom: 1em;
+		line-height: 1.4;
+		font-size: ($lead-font-size *.65);
+		font-weight: $font-weight-normal;
+		@include media-breakpoint-up(md) {
+			font-size: ($lead-font-size *.8);
+		}
+	}
+	// ラインマーカ装飾
+	&__line_ylw {
+		background: linear-gradient(transparent 60%, #ffff26 60%);
+	}
+	// コメ注などでの文章の頭揃え
+	&__cap {
+		text-indent: -1em;
+		padding-left: 1em;
+	}
+}
+// 文字サイズ、太さ
+.fz {
+	&__large {
+		font-size: 120%;
+		line-height: 1.4;
+	}
+	&__small {
+		font-size: $small-font-size;
+		line-height: 1.3;
+	}
+	&__bold {
+		font-weight: $font-weight-bold;
+	}
+	&__normal {
+		font-weight: $font-weight-normal;
+	}
+}
+// 文字色
+.color {
+	&__main {
+		color: $color-main;
+	}
+	&__sub1 {
+		color: $color-sub1;
+	}
+	&__sub2 {
+		color: $color-sub2;
+	}
+	&__sub3 {
+		color: $color-sub3;
+	}
+	&__red {
+		color: $color-red;
+	}
+	&__white {
+		color: #fff;
+	}
+	&__black {
+		color: $color-black;
+	}
+}
+// 書体
+.ff {
+	&__gothic {
+		font-family: $font-family-sans-serif;
+	}
+	&__mincho {
+		font-family: $font-family-serif;
+	}
+}
+// リンクアイコン
+a {
+	&[target='_blank']::after {
+		content: '\f08e';
+		font-family: 'FontAwesome';
+	}
+	&[href$='.pdf']::after {
+		content: '\f1c1';
+		font-family: 'FontAwesome';
+		color: red;
+	}
+	&[href$='.doc']::after,
+	&[href$='.docx']::after {
+		content: '\f1c2';
+		font-family: 'FontAwesome';
+		color: blue;
+	}
+	&[href$='.xls']::after,
+	&[href$='.xlsx']::after {
+		content: '\f1c3';
+		font-family: 'FontAwesome';
+		color: green;
+	}
+}

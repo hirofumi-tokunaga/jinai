@@ -1,0 +1,108 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Noto+Serif+JP:wght@300;500;700&display=swap');
+
+//------------------------------------------
+//  Original
+//------------------------------------------
+$content-inner: 1200px;
+$block-gutter-vertical: 60px;
+
+//------------------------------------------
+//  colors
+//------------------------------------------
+$color-black: #333;
+$color-black-light: #d3d3d3;
+$color-gray: #EFEFEF;
+$color-gray-light: #f0f0f0;
+$color-white: #fff;
+$color-main: #00A63C;
+$color-main-light: lighten(mix($color-main, white, 70%), 10%);
+$color-main2: #001058;
+$color-main-light: lighten(mix($color-main2, white, 70%), 10%);
+$color-sub1: #981455;
+$color-sub1-light: lighten(mix($color-sub1, white, 70%), 10%);
+$color-sub2: #0064b4;
+$color-sub2-light: lighten(mix($color-sub2, white, 70%), 10%);
+$color-sub3: #007450;
+$color-sub3-light: lighten(mix($color-sub3, white, 70%), 10%);
+$color-sub4: #ffb0b0;
+$color-sub4-light: lighten(mix($color-sub4, white, 90%), 5%);
+$color-anchor: #337ab7;
+$color-red: red;
+$color-blue: blue;
+$color-green: green;
+$color-body: #fff;
+
+// ---------------------------------------
+// Bootstrap
+// [origine] -> vender/bootstrap/_variables.scss
+// ---------------------------------------
+//  font colors
+$font-family-sans-serif: '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, Verdana, Roboto, 'Droid Sans', sans-serif;
+// $font-family-sans-serif: YakuHanJP, 'Noto Sans JP', '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, Verdana, Roboto, 'Droid Sans', sans-serif;
+$font-family-serif: 'Noto Serif JP',YuMincho, '游明朝', 'Hiragino Mincho ProN', 'ヒラギノ明朝 W3 JIS2004', 'Sawarabi Mincho', 'Times New Roman', Times, serif;
+$font-family-sans-serif-ie11 : 'メイリオ', Meiryo, Verdana, Roboto, 'Droid Sans', sans-serif;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 769px,
+  lg: $content-inner,
+  xl: 1367px
+);
+
+// Sizes
+$sizes:
+  (
+		5: 5%,
+		10: 10%,
+		15: 15%,
+		20: 20%,
+		25: 25%,
+		30: 30%,
+		35: 35%,
+		40: 40%,
+    45: 45%,
+    50: 50%,
+		60: 60%,
+		70: 70%,
+		75: 75%,
+		80: 80%,
+		90: 90%,
+    100: 100%,
+    auto: auto
+);
+
+$sizes-em:
+	(
+		1: 1em,
+		2: 2em,
+		3: 3em,
+		4: 4em,
+		5: 5em,
+		6: 6em,
+		7: 7em,
+		8: 8em,
+		9: 9em,
+		10: 10em,
+	);
+
+// font size
+$font-size-base: 1.6rem;
+$lead-font-size: ($font-size-base * 2);
+$h1-font-size: $font-size-base * 2.75;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.3;
+$h5-font-size: $font-size-base * 1.2;
+$h6-font-size: $font-size-base;
+$line-height-base: 1.7;
+$headings-line-height: 1.3;
+
+// breadcomb
+$breadcrumb-bg: transparent;
+// $breadcrumb-divider: '>';
+
+// table
+$table-border-color: #aaa;

@@ -1,0 +1,73 @@
+@import '../vendor/bootstrap/bootstrap_custom';
+// -------------------------------------------------
+// Bootstrapのデフォルトを調整する場合はここに記述
+// （他案件でも必要になりそうな調整）
+// -------------------------------------------------
+// ------------------------------------------------------------------
+// パンくず
+// ------------------------------------------------------------------
+.breadcrumb {
+	@include safe-area-spacing-l-r;
+}
+// ------------------------------------------------------------------
+// width, height - extends
+// ------------------------------------------------------------------
+// sizes - breakpoint
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size, $length in $sizes {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+      }
+    }
+  }
+}
+// sizes-em - breakpoint
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size-em, $length in $sizes-em {
+        .#{$abbrev}-em#{$infix}-#{$size-em} { #{$prop}: $length !important; }
+      }
+    }
+  }
+}
+// ------------------------------------------------------------------
+// margin padding - extend
+// ------------------------------------------------------------------
+$margin_padding_list: ("margin", "padding");
+$direction_list: ("top", "right", "bottom", "left");
+@each $css in $margin_padding_list {
+	@each $direction in $direction_list {
+		@for $i from 0 through 20 {
+			.#{str-slice($css,1,1)}#{str-slice($direction,1,1)}-#{$i*5} {
+				#{$css}-#{$direction}: 5px * $i !important;
+			}
+			.#{str-slice($css,1,1)}#{str-slice($direction,1,1)}-n#{$i*5} {
+				#{$css}-#{$direction}: -5px * $i !important;
+			}
+		}
+	}
+}
+@include media-breakpoint-up(md) {
+	@each $css in $margin_padding_list {
+		@each $direction in $direction_list {
+			@for $i from 0 through 20 {
+				.#{str-slice($css,1,1)}#{str-slice($direction,1,1)}-md-#{$i*5} {
+					#{$css}-#{$direction}: 5px * $i !important;
+				}
+				.#{str-slice($css,1,1)}#{str-slice($direction,1,1)}-n#{$i*5} {
+					#{$css}-#{$direction}: -5px * $i !important;
+				}
+			}
+		}
+	}
+}
+// ------------------------------------------------------------------
+// Form
+// ------------------------------------------------------------------
+.form-control {
+	width: auto;
+}

@@ -1,0 +1,46 @@
+@charset 'utf-8';
+.search {
+	#___gcse_0 {
+		* {
+			box-sizing: content-box;
+		}
+	}
+	.gsc-input-box {
+		height: auto;
+	}
+
+	.gsc-result {
+		.gs-title {
+			overflow: visible;
+		}
+	}
+	.gsc-table-result,
+	.gsc-thumbnail-inside,
+	.gsc-url-top {
+		padding-left: 0;
+	}
+
+	.gsc-cursor-box.gs-bidi-start-align {
+		text-align: center;
+		.gsc-cursor-page {
+			padding: 5px 10px;
+			display: inline-block;
+			background-color: #eee;
+			border: 1px #ccc solid;
+			color: $color-black;
+		}
+		.gsc-cursor-current-page {
+			background-color: $color-main;
+			color: #fff;
+		}
+	}
+
+	.gsc-control-wrapper-cse {
+		form {
+			background-color: #eee;
+			padding: 12px 20px;
+			box-sizing: border-box !important;
+		}
+	}
+}
+// privacy

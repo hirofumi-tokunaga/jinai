@@ -1,0 +1,246 @@
+// ---------------------------------------------
+//  list
+// ---------------------------------------------
+.list {
+	&__reset {
+		&,
+		li,
+		ol,
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+	// 黒丸
+	&__disc {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: disc;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+	}
+	// 算用数字
+	&__num {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: decimal;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(decimal);
+		}
+		&_kome {
+			@include list-style-kome(decimal);
+		}
+	}
+	// 先頭に0をつけた算用数字
+	&__num_zero {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: decimal-leading-zero;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(decimal-leading-zero, 2em, -2em);
+		}
+	}
+	// 小文字のローマ数字
+	&__lower_roman {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: lower-roman;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(lower-roman);
+		}
+	}
+	// 大文字のローマ数字
+	&__upper_roman {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: upper-roman;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(upper-roman);
+		}
+	}
+	// 小文字のアルファベット
+	&__lower_latin {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: lower-latin;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(lower-latin);
+		}
+	}
+	// 大文字のアルファベット
+	&__upper_latin {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1em;
+			padding-left: 1em;
+			list-style-type: upper-latin;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(upper-latin);
+		}
+	}
+	// ひらがなのあいうえお順
+	&__hiragana {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1.5em;
+			padding-left: 1.5em;
+			list-style-type: hiragana;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(hiragana, 2em, -2em);
+		}
+	}
+	// カタカナのアイウエオ順
+	&__katakana {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1.5em;
+			padding-left: 1.5em;
+			list-style-type: katakana;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(katakana, 2em, -2em);
+		}
+	}
+	// ひらがなのいろはにほへと順
+	&__hiragana-iroha {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1.5em;
+			padding-left: 1.5em;
+			list-style-type: hiragana-iroha;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(hiragana-iroha, 2em, -2em);
+		}
+	}
+	// カタカナのイロハニホヘト順
+	&__katakana-iroha {
+		&,
+		> li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		> li {
+			text-indent: -1.5em;
+			padding-left: 1.5em;
+			list-style-type: katakana-iroha;
+			list-style-position: inside;
+			& > * {
+				text-indent: 0;
+			}
+		}
+		&_kakko {
+			@include list-style-kakko(katakana-iroha, 2em, -2em);
+		}
+	}
+}

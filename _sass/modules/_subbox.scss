@@ -1,0 +1,39 @@
+// ---------------------------------------------
+//  sub box
+// ---------------------------------------------
+.subbox1 {
+	padding: 24px;
+	background-color: $color-gray-light;
+	&__inner {
+		border: 1px #ccc solid;
+		background-color: #fff;
+		padding: 16px;
+	}
+	&.small_box {
+		padding: 1em 1.2em;
+	}
+	@include media-breakpoint-up(md) {
+		padding: 32px;
+		&__inner {
+			padding: 24px;
+		}
+	}
+}
+.subbox2 {
+	padding: 24px;
+	border: 1px #ccc solid;
+	background-color: #fff;
+	&__inner {
+		background-color: #e5edf6;
+		padding: 16px;
+	}
+	&.small_box {
+		padding: 1em 1.2em;
+	}
+	@include media-breakpoint-up(md) {
+		padding: 32px;
+		&__inner {
+			padding: 24px;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+// ---------------------------------------------
+//  heading
+// ---------------------------------------------
+.ttl {
+	&__style_1 {
+		text-align: center;
+	}
+	&__style_2 {
+		border-bottom: 1px #ddd solid;
+		span {
+			position: relative;
+			display: inline-block;
+			padding-bottom: 6px;
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background-color: $color-black-light;
+			}
+		}
+	}
+	&__style_3 {
+		padding: .3em 0 .3em 24px;
+		position: relative;
+		background-color: #fff;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 2px;
+			background-color: $color-black-light;
+		}
+	}
+	&__style_4 {
+		padding: .3em 0 .3em 1.5em;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 1em;
+			height: 1px;
+			background-color: $color-black-light;
+		}
+	}
+}
+// support
+.h1,
+h1 {
+	&.ttl__style_3 {
+		padding-left: 24px;
+	}
+}
+.h2,
+h2 {
+	&.ttl__style_3 {
+		padding-left: 20px;
+	}
+}
+.h3,
+h3 {
+	&.ttl__style_3 {
+		padding-left: 18px;
+	}
+}
+.h4,
+.h5,
+h4,
+h5 {
+	&.ttl__style_3 {
+		padding-left: 14px;
+	}
+}

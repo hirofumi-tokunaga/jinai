@@ -1,0 +1,29 @@
+// ---------------------------------------------
+//  Pagination
+// --------------------------------------------
+.pagination {
+	border-radius: 0;
+	.page-item {
+	}
+	.page-link {
+		font-family: $font-family-sans-serif;
+		color: $color-black;
+		@include media-breakpoint-up(sm) {
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+	}
+	.page-item:first-child,
+	.page-item:last-child {
+		.page-link {
+			border-radius: 0;
+		}
+	}
+	.page-ite.active {
+		.page-link {
+			background-color: $color-main;
+			color: #fff;
+			border: 1px $color-main solid;
+		}
+	}
+}

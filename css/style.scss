@@ -1,0 +1,164 @@
+@charset 'utf-8';
+@import '../_sass/utility/setting';
+@import '../_sass/utility/mixin-extends';
+@import '../_sass/utility/bootstrap';
+@import '../_sass/utility/modules';
+
+// --------------------------------------------
+//	IE11でスクロールバーがコンテンツにかぶる問題
+// http://xn--lcki7of.jp/762/
+//---------------------------------------------
+@-ms-viewport {
+	width: auto;
+	initial-scale: 1;
+}
+// --------------------------------------------
+//	chromeの縮小画像ぼやけ問題
+// --------------------------------------------
+img {
+	-webkit-backface-visibility: hidden;
+}
+// --------------------------------------------
+//	全体
+//---------------------------------------------
+html {
+	font-size: 62.5%;
+}
+
+body {
+	padding-top: 59px;
+	width: 100%;
+	letter-spacing: .06em;
+	color: $color-black;
+	background-color: $color-body;
+	font-feature-settings: 'palt';
+	font-size: $font-size-base * .9;
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base;
+		padding-top: 167px;
+	}
+
+	&.ie11 {
+		font-family: $font-family-sans-serif-ie11;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+a {
+	transition: all .2s linear;
+	opacity: 1;
+	&:hover {
+		color: $color-main;
+	}
+	&.op6{
+		&:hover{
+			opacity: .6;
+		}
+	}
+}
+ol,
+ul {
+	padding-left: 1em;
+	li {
+		padding-left: 0;
+	}
+}
+// numberタイプの上下ボタンを非表示
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	margin: 0;
+	-webkit-appearance: none;
+}
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+.h1,
+h1 {
+	font-size: $h1-font-size * .8;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	@include media-breakpoint-up(md) {
+		font-size: $h1-font-size;
+	}
+}
+.h2,
+h2 {
+	font-size: $h2-font-size *.8;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: .8em;
+	@include media-breakpoint-up(md) {
+		font-size: $h2-font-size;
+		margin-bottom: 1em;
+	}
+}
+.h3,
+h3 {
+	font-size: $h3-font-size * .8;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: .8em;
+	@include media-breakpoint-up(md) {
+		font-size: $h3-font-size;
+		margin-bottom: 1em;
+	}
+}
+.h4,
+h4 {
+	font-size: $h4-font-size * .85;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: .8em;
+	@include media-breakpoint-up(md) {
+		font-size: $h4-font-size;
+		margin-bottom: 1em;
+	}
+}
+.h5,
+h5 {
+	font-size: $h5-font-size *.85;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: .8em;
+	@include media-breakpoint-up(md) {
+		font-size: $h5-font-size;
+		margin-bottom: 1em;
+	}
+}
+figcaption {
+	font-size: 1.1rem;
+	display: block;
+	padding-top: .2em;
+	text-align: center;
+	color: #999;
+}
+*:last-child {
+	margin-bottom: 0;
+}
+.fa-file-pdf-o {
+	color: red;
+}
+.fa-file-word-o {
+	color: blue;
+}
+.fa-file-excel-o {
+	color: green;
+}
+// --------------------------------------------
+//	IMPORTS
+// --------------------------------------------
+@import '../_sass/ol_header';
+@import '../_sass/ol_footer';
+@import '../_sass/ol_nav';
+@import '../_sass/ol_contents';
+@import '../_sass/home';
+@import '../_sass/search';
+@import '../_sass/guideline';
+@import '../_sass/print';
+@import '../_sass/page_school-life';
+@import '../_sass/page_news';

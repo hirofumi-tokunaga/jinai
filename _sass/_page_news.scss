@@ -1,0 +1,235 @@
+@charset 'utf-8';
+.news{
+  .inner{
+    padding: 0 10px;
+  }
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    @include media-breakpoint-down(sm) {
+     display: block;
+    }
+  }
+  &__main{
+    width: 80%;
+    margin-right: 50px;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      padding: 0 20px;
+     }
+  }
+  &__side{
+    width: 20%;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      padding: 0 20px;
+      margin-top: 60px;
+     }
+    &_box{
+      margin-bottom: 40px;
+    }
+    &_ttl{
+      
+    }
+    &_list{
+      padding-left: 0;
+      li{
+        list-style: none;
+      }
+      a{
+        display: inline-block;
+        padding: 0 10px;
+        color: $color-black;
+        margin: 0 10px 5px 0;
+        font-size: 1.4rem;
+        text-decoration: underline;
+        &:hover{
+          color:$color-main;
+        }
+      }
+    }
+  }
+  &__list{
+    padding-left: 0;
+  }
+  &__item{
+    display: flex;
+    border-bottom: 1px solid $color-black;
+    margin-top: 25px;
+    &:first-child{
+      margin-top: 0;
+    }
+    &-logo{
+      width: 110px;
+    }
+    &-txt{
+      &-block{
+        width: 87%;
+        padding-left: 10px;
+      }
+    }
+    &-time{
+      font-size: 1.4rem;
+    }
+    &-label{
+      a{
+        display: inline-block;
+					padding: 0 1rem;
+					border: 1px solid $color-gray;
+					background: white;
+					border-radius: 2rem;
+					color: $color-black;
+					margin: 0 10px 5px 0;
+					font-size: 1.2rem;
+          &:hover{
+						background: $color-black;
+						color: white;
+						text-decoration: none;
+					}
+      }
+    }
+    &-link{
+      color: $color-black;
+				padding: 0 2rem 1.5rem 0;
+				position: relative;
+				display: block;
+				&::after{
+					content: "\f105";
+					font-family: fontawesome;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translate(0,-49%);
+					transition-duration: .2s;
+				}
+				&:hover{
+					text-decoration: none;
+					&::after{
+						transform: translate(10px,-49%);
+						transition-duration: .2s;
+					}
+				}
+    }
+  }
+
+
+  &__detail{
+    .contents__ttl_style4{
+      writing-mode:horizontal-tb;
+      &::after{
+        content: none;
+      }
+    }
+    .news__flex{
+      margin-top: 10px;
+      margin-bottom: 60px;
+    }
+
+    &_content{
+      margin-top: 40px;
+    }
+    &_btn{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 60px auto 0;
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  .nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 60px auto 0;
+    .nav-previous{
+      margin-right: 50px;
+    }
+    .nav-previous,.nav-next{
+      display: flex;
+			justify-content: end;
+			@include media-breakpoint-down(md) {
+				justify-content: left;
+				margin-top: 50px;
+			}
+			a{
+				font-family: 'Crimson Text', serif;
+				color: $color-black;
+				align-items: center;
+				position: relative;
+				&::after{
+					content: "";
+					width: 100%;
+					height: 2px;
+					background: $color-main;
+					position: absolute;
+					bottom	:0;
+					left: 0;
+				}
+				&:hover{
+					text-decoration: none;
+					color: $color-main;
+					&::after{
+						background: $color-main;
+						transform: translateY(10px);
+						transition-duration: .2s;
+					}
+				}
+			}
+    }
+  }
+
+  .news__side_box{
+    ul{
+      padding-left: 0;
+      li{
+        list-style: none;
+      }
+      a{
+        display: inline-block;
+        padding: 0 10px;
+        color: $color-black;
+        margin: 0 10px 5px 0;
+        font-size: 1.4rem;
+        text-decoration: underline;
+        &:hover{
+          color:$color-main;
+        }
+      }
+    }
+  }
+}
+
+
+//ページャー
+.pagination{
+  .nav-links{ 
+    padding: 30px;
+    align-items: center;
+    justify-content: center!important;
+  }
+  .nav-links a{
+    padding: 10px;
+     margin: 10px; 
+     background: #f3f3f3; 
+     text-decoration: none;
+      border-radius: 3px; 
+      color: $color-black;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      }
+  
+  .nav-links a:hover{
+    padding: 10px;
+     margin: 10px; 
+     color: #FFFFFF; 
+     background: #333; 
+     text-decoration: none; 
+     border-radius: 3px; 
+     -moz-border-radius: 3px;
+     -webkit-border-radius: 3px;  
+    }
+}

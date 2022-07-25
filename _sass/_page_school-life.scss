@@ -1,0 +1,51 @@
+@charset 'utf-8';
+.school-life{
+  .inner{
+    @include media-breakpoint-down(md) {
+      padding: 0 1rem;
+    }
+  }
+  &__daysec{
+    padding: 100px  0;
+    @include media-breakpoint-down(md) {
+      padding: 50px  0;
+    }
+  }
+  &__daytime{
+    width: 125px;
+        @include media-breakpoint-down(md) {
+      width: auto;
+    }
+  }
+  &__daytext{
+    width: 855px;
+    padding: 0 2rem;
+        @include media-breakpoint-down(md) {
+      width: auto;
+      padding: 0;
+      margin: 1rem 0;
+    }
+  }
+  &__dayph{
+    width: 220px;
+    @include media-breakpoint-down(md) {
+      width: auto;
+      text-align: center;
+    }
+  }
+  &__time{
+    color: $color-main;
+    font-family: 'Crimson Text', serif;
+    font-weight: normal;
+    font-size: 4rem;
+    line-height: 1;
+  }
+  &__dayitem{
+    display: flex;
+    padding: 2rem 0;
+    border-bottom: 1px dotted $color-black-light;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+}

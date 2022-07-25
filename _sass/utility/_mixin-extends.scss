@@ -1,0 +1,102 @@
+@charset 'utf-8';
+//----------------------------------------
+//  mixin
+//----------------------------------------
+// list style
+@mixin list-style-text($text: '●', $pad:1.5em, $marg:.5em) {
+	padding-left: $pad;
+	list-style: none;
+	&:before {
+		content: $text;
+		display: inline-block;
+		margin-left: -$pad;
+		margin-right: $marg;
+		color: inherit;
+		font-size: 80%;
+		text-align: left;
+		vertical-align: top;
+	}
+}
+// kakko
+@mixin list-style-kakko($text: 'decimal', $pad:1.5em, $indent:-1.5em) {
+	counter-reset : item ;
+	&,
+	> li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	> li {
+		counter-increment: item;
+		list-style: none;
+		text-indent: $indent;
+		padding-left: $pad;
+		&::before {
+			content: "(" counter(item, $text) ")";
+		}
+	}
+}
+// kome
+@mixin list-style-kome($text: 'decimal', $pad:2em, $indent:-2em) {
+	counter-reset : item ;
+	&,
+	> li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	> li {
+		counter-increment: item;
+		list-style: none;
+		text-indent: $indent;
+		padding-left: $pad;
+		&::before {
+			content: "※" counter(item, $text) " ";
+		}
+	}
+}
+
+// FontFamily Mincho
+@mixin mincho() {
+	font-family: $font-family-serif;
+	font-weight: bold;
+	font-feature-settings: 'palt';
+	transform: rotate(.05deg);
+}
+
+// iPhoneX safe-area padding
+@mixin safe-area-spacing-l-r() {
+	@media screen and (min-width: 812px ) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+		padding-right: constant(safe-area-inset-right);
+		padding-left: constant(safe-area-inset-left);
+		padding-right: env(safe-area-inset-right);
+		padding-left: env(safe-area-inset-left);
+	}
+}
+//----------------------------------------
+//  extends
+//----------------------------------------
+
+%reset {
+	p,
+	li,
+	ul,
+	ol,
+	dl,
+	dt,
+	dd,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		padding: 0;
+	}
+	li,
+	ol,
+	ul {
+		list-style: none;
+	}
+}

@@ -1,0 +1,34 @@
+// ---------------------------------------------
+//  layout
+// ---------------------------------------------
+// コンテンツアウトライン
+.block {
+	$section_margin: $block-gutter-vertical * .8;
+	margin-bottom: $section_margin;
+	& > .block {
+		margin-bottom: $section_margin*.5;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include media-breakpoint-up(md) {
+		$section_margin: $block-gutter-vertical;
+		margin-bottom: $section_margin;
+		& > .block {
+			margin-bottom: $section_margin*.5;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+// インナーコンテンツ幅
+.inner {
+	width: 100%;
+	max-width: $content-inner;
+	margin-left: auto;
+	margin-right: auto;
+	@include media-breakpoint-up(lg) {
+		width: $content-inner;
+	}
+}

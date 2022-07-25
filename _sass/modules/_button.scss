@@ -1,0 +1,154 @@
+// ---------------------------------------------
+//  buttons
+// ---------------------------------------------
+.nav_btn {
+	display: inline-block;
+	overflow: visible;
+	a {
+		position: relative;
+		display: block;
+		padding: 1em 2em 1em 1em;
+		line-height: 1.4;
+		color: $color-black;
+		border: 1px solid $color-black;
+		text-align: center;
+		background-color: #fff;
+		outline: none;
+		&::after {
+			content: '\f105';
+			font-family: 'FontAwesome';
+			display: block;
+			position: absolute;
+			right: 4px;
+			top: 50%;
+			margin-top: -.5em;
+			width: 1em;
+			height: 1em;
+			line-height: 1;
+			text-align: center !important;
+			font-size: 1.3em;
+		}
+	}
+	// 全幅
+	&.btn_wide {
+		display: block;
+	}
+	// 細身
+	&.btn_thin {
+		a {
+			padding: 6px 2em 6px 1em;
+		}
+	}
+	// 塗りつぶし
+	&.btn_fill {
+		a {
+			background-color: $color-black;
+			color: #fff;
+			&::before {
+				color: #fff;
+			}
+		}
+	}
+	// 色1
+	&.btn_clr1 {
+		a {
+			border-color: $color-main;
+			color: $color-main;
+		}
+		&.btn_fill {
+			a {
+				background-color: $color-main;
+				color: #fff;
+			}
+		}
+	}
+	// 色2
+	&.btn_clr2 {
+		a {
+			border-color: $color-sub1;
+			color: $color-sub1;
+		}
+		&.btn_fill {
+			a {
+				background-color: $color-sub1;
+				color: #fff;
+			}
+		}
+	}
+	// 色3
+	&.btn_clr3 {
+		a {
+			border-color: $color-sub2;
+			color: $color-sub2;
+		}
+		&.btn_fill {
+			a {
+				background-color: $color-sub2;
+				color: #fff;
+			}
+		}
+	}
+	// アイコン
+	&.icon-external {
+		a {
+			padding-right: 1em;
+		}
+		a::after {
+			content: '\f08e';
+			top: 8px;
+			margin-top: 0;
+			font-size: 1.1rem;
+		}
+	}
+	&.icon-xls {
+		a {
+			padding-right: 1em;
+		}
+		a::after {
+			content: '\f1c3';
+			top: 8px;
+			margin-top: 0;
+			font-size: 1.1rem;
+			color: green;
+		}
+		&.btn_fill {
+			a::after {
+				color: #fff;
+			}
+		}
+	}
+	&.icon-word {
+		a {
+			padding-right: 1em;
+		}
+		a::after {
+			content: '\f1c2';
+			top: 8px;
+			margin-top: 0;
+			font-size: 1.1rem;
+			color: blue;
+		}
+		&.btn_fill {
+			a::after {
+				color: #fff;
+			}
+		}
+	}
+	&.icon-pdf {
+		a {
+			padding-right: 1em;
+		}
+		a::after {
+			content: '\f1c1';
+			top: 8px;
+			margin-top: 0;
+			font-size: 1.1rem;
+			color: red;
+		}
+	}
+	&.btn_fill {
+		a::after {
+			color: #fff;
+		}
+	}
+}
